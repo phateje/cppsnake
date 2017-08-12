@@ -1,14 +1,20 @@
 #pragma once
+#include <vector>
 class Board
 {
 public:
 	Board();
-	Board(int width, int height, char wall);
+	Board(const int width, const int height, char wall);
 	~Board();
 
+	void printBoard();
+
 private:
-	int width;
-	int height;
+	const int width;
+	const int height;
+	std::vector< std::vector<char> > theBoard;
+
+
 	char wall;
 };
 
